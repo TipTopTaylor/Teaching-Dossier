@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ms. Taylor as a Teacher - Teaching Philosophy</title>
+  <style>
+    /* Color scheme - STEM nerdy theme */
+    :root {
+      --primary: #3a86ff;
+      --secondary: #8338ec;
+      --accent: #ff006e;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #38b000;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      /* faded background */
+      background-image:
+        linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+        url("background.jpg");
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    /* Navigation bar */
+    nav {
+      background-color: var(--dark);
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--light);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .logo span { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    .nav-links li { margin-left: 20px; white-space: nowrap; }
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px; left: 0;
+      width: 0; height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover::after { width: 100%; }
+    /* Atom Icon */
+    .atom-icon { width: 45px; height: 45px; margin-right: 10px; position: relative; }
+    .nucleus {
+      position: absolute; width: 18px; height: 18px;
+      background: var(--accent); border-radius: 50%;
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+    }
+    .electron-orbit {
+      position: absolute; width: 45px; height: 45px;
+      border: 2px solid rgba(58,134,255,0.3); border-radius: 50%;
+      animation: spin 3s linear infinite;
+    }
+    .electron {
+      position: absolute; width: 7px; height: 7px;
+      background: var(--primary); border-radius: 50%;
+      top: -3.5px; left: 50%; transform: translateX(-50%);
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    /* Section title */
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--dark);
+      text-align: center;
+    }
+    /* Each philosophy “card” */
+    .content-section {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px;
+      margin-bottom: 50px;
+    }
+    .content-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .content-section h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 60px; height: 3px;
+      background-color: var(--accent);
+    }
+    .content-section p,
+    .content-section ul {
+      color: var(--dark);
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .content-section ul {
+      list-style: disc inside;
+      margin-left: 20px;
+    }
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: var(--light);
+      padding: 40px 0;
+      text-align: center;
+    }
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .social-links a {
+      color: var(--light);
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .container { padding: 20px; }
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="DossierWebsite.html" class="logo">
+        <div class="atom-icon">
+          <div class="nucleus"></div>
+          <div class="electron-orbit">
+            <div class="electron"></div>
+          </div>
+        </div>
+        Ms. Taylor<span>.</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="DossierWebsite.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="LessonPlans.html">Lesson Plans</a></li>
+        <li><a href="philosophy.html">Teaching Philosophy</a></li>
+        <li><a href="professional_development.html">Professional Development</a></li>
+        <li><a href="professional_appraisals.html">Appraisals</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2 class="section-title">My Teaching Philosophy</h2>
+
+    <div class="content-section">
+      <h3>My Aspirations, Goals, and Objectives</h3>
+      <p>As a B.Ed candidate, I will:</p>
+      <ul>
+        <li>Create a classroom environment where students feel safe and supported, and where learning is an exciting and fun endeavor, not something they are incapable of or scared to try.</li>
+        <li>Develop student scientific literacy and confidence, encouraging them in their curiosity and helping them feel confident enough in their scientific skills to question and research information they encounter.</li>
+        <li>Incorporate a thinking classroom style and encourage inquiry-based learning, while still integrating Universal Design for Learning (UDL) and varied assessment.</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h3>For My Students, I Will:</h3>
+      <ul>
+        <li>Make learning fun and accessible, while maintaining high expectations and fostering each student's belief in their capability for high achievement.</li>
+        <li>Equip students with the scientific confidence to navigate an increasingly technological and scientifically dependent world.</li>
+        <li>Foster inquiry and curiosity, allowing students to practice learning through exploration, getting stuck, and asking questions through UDL principles while emphasizing a thinking-based environment.</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h3>Methods to Reach These Goals</h3>
+      <p>To achieve these objectives, I will:</p>
+      <ul>
+        <li>Emphasize student relationship building, always putting students first in my practice to tailor lessons to the learners in front of me rather than following a rigid schedule.</li>
+        <li>Infuse fun and engaging activities into science learning, constantly reworking and improving lessons to maintain excitement and curiosity.</li>
+        <li>Design and implement a thinking classroom curriculum that balances high expectations with student-centered approaches, ensuring lessons remain challenging and accessible.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>Connect with me and discover more about my teaching journey.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ms. Taylor’s Teaching Portfolio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

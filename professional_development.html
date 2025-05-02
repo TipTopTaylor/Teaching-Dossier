@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ms. Taylor as a Teacher - Professional Development</title>
+  <style>
+    :root {
+      --primary: #3a86ff;
+      --secondary: #8338ec;
+      --accent: #ff006e;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #38b000;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      /* faded background */
+      background-image:
+        linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+        url("background.jpg");
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    /* Navigation */
+    nav {
+      background-color: var(--dark);
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--light);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .logo span {
+      color: var(--accent);
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      overflow-x: auto;
+    }
+    .nav-links li {
+      margin-left: 20px;
+      white-space: nowrap;
+    }
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    /* Atom icon */
+    .atom-icon {
+      width: 45px;
+      height: 45px;
+      position: relative;
+      margin-right: 10px;
+    }
+    .nucleus {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .electron-orbit {
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      border: 2px solid rgba(58,134,255,0.3);
+      border-radius: 50%;
+      animation: spin 3s linear infinite;
+    }
+    .electron {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      background: var(--primary);
+      border-radius: 50%;
+      top: -3.5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    /* Page title */
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--dark);
+      text-align: center;
+    }
+    /* Card style */
+    .content-section {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px;
+      margin-bottom: 50px;
+    }
+    .content-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .content-section h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+    }
+    .content-section p {
+      margin-bottom: 20px;
+      color: var(--dark);
+    }
+    .content-section ul {
+      list-style: disc inside;
+      margin-left: 20px;
+      color: var(--dark);
+    }
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: var(--light);
+      text-align: center;
+      padding: 40px 0;
+    }
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .container { padding: 20px; }
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="DossierWebsite.html" class="logo">
+        <div class="atom-icon">
+          <div class="nucleus"></div>
+          <div class="electron-orbit">
+            <div class="electron"></div>
+          </div>
+        </div>
+        Ms. Taylor<span>.</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="DossierWebsite.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="LessonPlans.html">Lesson Plans</a></li>
+        <li><a href="philosophy.html">Teaching Philosophy</a></li>
+        <li><a href="professional_development.html">Professional Development</a></li>
+        <li><a href="professional_appraisals.html">Appraisals</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2 class="section-title">Professional Development Plan</h2>
+
+    <div class="content-section">
+      <h3>Year Planning</h3>
+      <p><strong>Goal:</strong> Complete year plans for Grade 11 &amp; 12 Functions and Grade 10 Applied &amp; Academic Science incorporating a thinking classroom style with scale-up and scale-down activities.</p>
+      <ul>
+        <li><strong>By Feb 3, 2025:</strong> Finish and test Grade 10 Academic Science plan; outline Grade 10 Applied using curriculum comparisons; review AT’s Grade 11–12 Functions plan.</li>
+        <li><strong>Feb 3–Mar 1, 2025:</strong> Teach Grade 11 Functions, refine plan with AT guidance; pilot applied lessons in colleagues’ classrooms and gather feedback.</li>
+        <li><strong>By Apr 29, 2025:</strong> Finalize all four course plans in a professional format with reflection spaces for ongoing journaling and improvement.</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h3>Scientific Literacy</h3>
+      <p><strong>Goal:</strong> Enhance ability to incorporate scientific literacy and communication skills into teaching practice.</p>
+      <ul>
+        <li><strong>By Feb 3, 2025:</strong> Brainstorm literacy-based assignments; audit past lessons for quick questioning activities; research resources with physics instructor.</li>
+        <li><strong>Feb 3–Mar 1, 2025:</strong> Collaborate with AT and STEM colleagues to integrate literacy tasks; pilot a major assignment in Grade 11 Biology and collect peer feedback.</li>
+        <li><strong>By Apr 29, 2025:</strong> Produce a polished literacy assignment and toolkit of mini-tasks to embed in any science lesson, plus reflection notes from initial implementations.</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h3>Assessment Strategies</h3>
+      <p><strong>Goal:</strong> Learn and apply varied assessment for/as/of learning techniques tailored to diverse course levels.</p>
+      <ul>
+        <li><strong>By Feb 3, 2025:</strong> Create exit tickets for past lessons; compile a list of formative/summative hybrid tasks (e.g., error-analysis quizzes, checkpoint quizzes tied to unit tests).</li>
+        <li><strong>Feb 3–Mar 1, 2025:</strong> Refine and trial assessment ideas with AT and applied-course teachers; gather observations on student engagement and efficacy.</li>
+        <li><strong>By Start of 2025–26:</strong> Develop a living assessment portfolio with templates and reflection logs for ongoing adaptation across course types.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Ms. Taylor's Teaching Portfolio. All rights reserved.</p>
+      <div class="footer-bottom"></div>
+    </div>
+  </footer>
+</body>
+</html>

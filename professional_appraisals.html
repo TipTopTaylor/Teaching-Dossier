@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ms. Taylor as a Teacher - Professional Appraisals</title>
+  <style>
+    :root {
+      --primary: #3a86ff;
+      --secondary: #8338ec;
+      --accent: #ff006e;
+      --light: #f8f9fa;
+      --dark: #212529;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      /* faded background */
+      background-image:
+        linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+        url("background.jpg");
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    /* Navigation */
+    nav {
+      background-color: var(--dark);
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--light);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .logo span {
+      color: var(--accent);
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      overflow-x: auto;
+    }
+    .nav-links li {
+      margin-left: 20px;
+      white-space: nowrap;
+    }
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    /* Atom icon */
+    .atom-icon {
+      width: 45px;
+      height: 45px;
+      position: relative;
+      margin-right: 10px;
+    }
+    .nucleus {
+      position: absolute;
+      width: 18px; height: 18px;
+      background: var(--accent);
+      border-radius: 50%;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .electron-orbit {
+      position: absolute;
+      width: 45px; height: 45px;
+      border: 2px solid rgba(58,134,255,0.3);
+      border-radius: 50%;
+      animation: spin 3s linear infinite;
+    }
+    .electron {
+      position: absolute;
+      width: 7px; height: 7px;
+      background: var(--primary);
+      border-radius: 50%;
+      top: -3.5px; left: 50%;
+      transform: translateX(-50%);
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    /* Page title */
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--dark);
+      text-align: center;
+    }
+    /* Card style for each appraisal */
+    .content-section {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px;
+      margin-bottom: 50px;
+    }
+    .content-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .content-section h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 60px; height: 3px;
+      background: var(--accent);
+    }
+    .content-section p {
+      margin-bottom: 20px;
+      color: var(--dark);
+    }
+    blockquote {
+      margin: 20px 0;
+      padding-left: 15px;
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: #555;
+    }
+    .quote-cite {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 20px;
+    }
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: var(--light);
+      text-align: center;
+      padding: 40px 0;
+    }
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .container { padding: 20px; }
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="DossierWebsite.html" class="logo">
+        <div class="atom-icon">
+          <div class="nucleus"></div>
+          <div class="electron-orbit">
+            <div class="electron"></div>
+          </div>
+        </div>
+        Ms. Taylor<span>.</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="DossierWebsite.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="LessonPlans.html">Lesson Plans</a></li>
+        <li><a href="philosophy.html">Teaching Philosophy</a></li>
+        <li><a href="professional_development.html">Professional Development</a></li>
+        <li><a href="professional_appraisals.html">Appraisals</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2 class="section-title">Professional Appraisals</h2>
+
+    <div class="content-section">
+      <h3>Short Summative Assessment (PRAC 420/421)</h3>
+      <p><strong>Date:</strong> October 16, 2024 | <strong>Associate Teacher:</strong> Michael Szarka</p>
+      <blockquote>
+        "Taylor jumped right in, helping out from day 1 and taking on a class in her second week, demonstrating excellent initiative beyond what was expected. She has built excellent and professional relationships with the students in all of my classes. Taylor and I have conversations everyday about how lessons are going and reflecting on best practices. She has taken notes extremely well and has implemented the reflections into her own practice."
+      </blockquote>
+      <blockquote>
+        "Taylor has done a great job promoting a safe and trusting environment. The only small improvement to make is how to re-direct groups to ensure that they remain engaged and on topic. Taylor has employed many thinking classroom style and investigative lessons in grade 10 science. This is the first time she has done this style of teaching and has demonstrated an incredible aptitude for the practice."
+      </blockquote>
+    </div>
+
+    <div class="content-section">
+      <h3>Full Summative Assessment (PRAC 430/431)</h3>
+      <p><strong>Date:</strong> November 17, 2024 | <strong>Associate Teacher:</strong> Michael Szarka</p>
+      <blockquote>
+        "Taylor jumped in and helped out from day 1; assisting students and building relationships. She also independently developed and adapted lessons to fit our class and integrate the learning that she had been doing during her observation phase. Taylor was extremely professional, made good decisions for the class, and learned from many of her colleagues in a meaningful way."
+      </blockquote>
+      <blockquote>
+        "Taylor, put simply, was incredible and should have her own classroom right now. Her enthusiasm for teaching and learning is palpable within a minute of speaking to her; something noticed, and appreciated, by both staff and students. Taylor came in to the placement comfortable due to her previous jobs and volunteer work, but continued to grow and improve over the 7 weeks with me. Her ability to take feedback, adapt, and improve her practice in such a short time is something to marvel at. Taylor is already a fantastic teacher, and has shown that her ceiling in this career is vast. I selfishly do not want her to leave this practicum, as I lose my teaching partner, and hope that she is a colleague at some point down the road. Taylor has exceeded every expectation I could have of an excellent teacher candidate; well done."
+      </blockquote>
+    </div>
+
+    <div class="content-section">
+      <h3>Interim Formative Assessment (PRAC 440/441)</h3>
+      <p><strong>Date:</strong> February 24, 2025 | <strong>Associate Teacher:</strong> Lisa Morris</p>
+      <blockquote>
+        "Taylor is going to make a great teacher. She is dedicated to getting to know her learners and providing differentiated instruction to encourage success of all students. Taylor has created some new engaging activities and incorporates discovering new concepts and ideas into her lesson plans. I wish Taylor all the best in her teaching journey!"
+      </blockquote>
+    </div>
+
+    <div class="content-section">
+      <h3>Full Summative Assessment (PRAC 440/441)</h3>
+      <p><strong>Date:</strong> March 5, 2025 | <strong>Associate Teacher:</strong> Lisa Morris</p>
+      <blockquote>
+        "Taylor interacts with students at a professional level, takes feedback, makes changes, and implements suggestions in future lessons when possible."
+      </blockquote>
+      <blockquote>
+        "Taylor created activities that allowed students to first discover new content and information before teaching it. This allowed students to feel comfortable with the new material and encouraged participation during the lesson."
+      </blockquote>
+      <blockquote>
+        "Taylor did a great job delivering authentic lessons to both the 2D and 2P students that encouraged participation and engaged the learners in the room. For example, Taylor created a periodic table with the 2P class with elements the students developed, and they loved it! Taylor needs to watch her timing during lessons to ensure she doesn't spend too much time on one task and move on when most of the class is ready to do so."
+      </blockquote>
+      <blockquote>
+        "Taylor is working hard to create lessons that are engaging and has a good understanding of individual student needs. She is encouraged to continue creating fun and exciting lessons that cater to the learners. I wish Taylor all the best and I know she will be a great teacher!"
+      </blockquote>
+    </div>
+
+    <div class="content-section">
+      <h3>Alternative Practicum Experience (PRAC 450/451)</h3>
+      <p><strong>Date:</strong> March 27, 2025 | <strong>Host:</strong> Carolyn Crosby, Texas Instruments</p>
+      <blockquote>
+        "Taylor's work during her time on practicum was exceptional. She worked diligently to develop lessons on finance to prepare students to work with a heat loss house project that is developed through Texas Instruments. She delivered materials on time, formatted to guidelines, utilized all feedback, and continued developing her project to fruition."
+      </blockquote>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Ms. Taylor's Teaching Portfolio. All rights reserved.</p>
+      <div class="footer-bottom"></div>
+    </div>
+  </footer>
+</body>
+</html>
